@@ -74,7 +74,7 @@ public class TestsBase {
         if(!loggedIn){
             driver.get(baseUrl + "/signin");
             driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys(username);
-            driver.findElement(By.xpath("//input[@placeholder='Set Password']")).sendKeys(password);
+            driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
             List<WebElement> buttons = driver.findElements(By.tagName("button"));
             for (WebElement button : buttons){
                 if ("LOG IN".equals(button.getText().trim()))button.click();
